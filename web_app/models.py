@@ -28,7 +28,7 @@ class Company(models.Model):
 
 
 class Contact(models.Model):
-    address = models.CharField(max_length=255, blank=True, null=True)
+    address = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=14)
     location = models.URLField()
     email = models.EmailField()
@@ -60,3 +60,19 @@ class Main(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+
+class ContactTo(models.Model):
+    address = models.CharField(max_length=255, blank=True, null=True)
+    phone_number = models.CharField(max_length=14)
+    location = models.URLField()
+    email = models.EmailField()
+    whatsapp = models.URLField(blank=True, null=True)
+    instagram = models.URLField(blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = 'Contact'
+
+    def __str__(self):
+        return f'{self.address}'
