@@ -14,7 +14,7 @@ class Admin(admin.ModelAdmin):
 
 
 @admin.register(Contact)
-class PersonAdmin3(admin.ModelAdmin):
+class PersonAdmin3(TranslationAdmin):
     pass
 
 

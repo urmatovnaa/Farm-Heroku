@@ -28,7 +28,7 @@ class Company(models.Model):
 
 
 class Contact(models.Model):
-    address = models.CharField(max_length=255)
+    address = models.CharField(max_length=255, blank=True, null=True)
     phone_number = models.CharField(max_length=14)
     location = models.URLField()
     email = models.EmailField()

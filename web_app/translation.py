@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from web_app.models import Company, AboutUs, Main
+from web_app.models import Company, AboutUs, Main, Contact
 
 
 @register(Company)
@@ -15,3 +15,8 @@ class AboutUsTranslationOptions(TranslationOptions):
 @register(Main)
 class MainTranslationOptions(TranslationOptions):
     fields = ('name', 'text')
+
+
+@register(Contact)
+class ContactTranslationOptions(TranslationOptions):
+    fields = ('address',)
