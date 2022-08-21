@@ -2,7 +2,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 from rest_framework.viewsets import ModelViewSet
 
-from web_app.models import Company, AboutUs, ContactTo, Main
+from web_app.models import Company, AboutUs, Contact, Main
 from web_app.serializers import CompanySerializer, CompanyDetailSerializer, \
     ContactSerializer, MainSerializer, AboutUsSerializer
 
@@ -21,7 +21,7 @@ class CompanyView(ModelViewSet):
 
 
 class ContactViewSet(ModelViewSet):
-    queryset = ContactTo.objects.all()
+    queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
 

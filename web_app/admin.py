@@ -1,6 +1,6 @@
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
-from web_app.models import ProductPhoto, Company, ContactTo, Main, AboutUs
+from web_app.models import ProductPhoto, Company, Contact, Main, AboutUs
 
 
 @admin.register(Company)
@@ -13,7 +13,7 @@ class Admin(admin.ModelAdmin):
     pass
 
 
-@admin.register(ContactTo)
+@admin.register(Contact)
 class PersonAdmin3(TranslationAdmin):
     pass
 

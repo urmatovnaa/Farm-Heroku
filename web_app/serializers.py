@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from web_app.models import ProductPhoto, Company, Main, AboutUs, ContactTo
+from web_app.models import ProductPhoto, Company, Main, AboutUs, Contact
 
 
 class ProductPhotoSerializer(serializers.ModelSerializer):
@@ -26,7 +26,7 @@ class CompanyDetailSerializer(serializers.ModelSerializer):
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ContactTo
+        model = Contact
         fields = '__all__'
 
 
