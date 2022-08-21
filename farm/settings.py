@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_yasg',
     'silk',
+    'corsheaders',
     # my apps
     'web_app',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
