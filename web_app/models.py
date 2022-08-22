@@ -2,7 +2,7 @@ from django.db import models
 
 
 class ProductPhoto(models.Model):
-    photo = models.ImageField(upload_to='product_photo')
+    photo = models.ImageField(upload_to='product_photo/')
     company = models.ForeignKey('web_app.Company', models.CASCADE, related_name='products_photos')
 
     def __str__(self):
@@ -11,8 +11,8 @@ class ProductPhoto(models.Model):
 
 class Company(models.Model):
     name = models.CharField(max_length=255)
-    logo = models.ImageField(upload_to='logo')
-    photo = models.ImageField(upload_to='company_photo')
+    logo = models.ImageField(upload_to='logo/')
+    photo = models.ImageField(upload_to='company_photo/')
     information = models.TextField()
     key_words = models.CharField(max_length=255, null=True)
     web_site = models.URLField()
