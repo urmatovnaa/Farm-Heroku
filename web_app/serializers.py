@@ -13,7 +13,7 @@ class CompanySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Company
-        fields = ('id', 'name', 'photo')
+        fields = ('id', 'name', 'name_en', 'name_ru', 'photo')
 
 
 class CompanyDetailSerializer(serializers.ModelSerializer):
@@ -21,7 +21,8 @@ class CompanyDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Company
-        fields = ('id', 'name', 'logo', 'information', 'web_site', 'key_words', 'products_photos')
+        fields = ('id', 'name', 'name_en', 'name_ru', 'logo', 'information',
+                  'information_en', 'information_ru', 'web_site', 'key_words', 'products_photos')
 
 
 class ContactSerializer(serializers.ModelSerializer):
