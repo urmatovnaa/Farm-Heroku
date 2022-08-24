@@ -1,16 +1,19 @@
 from django.contrib import admin
+from django.contrib.admin.options import TabularInline
 from modeltranslation.admin import TranslationAdmin
 from web_app.models import ProductPhoto, Company, Contact, Main, AboutUs
 
 
+class ProductImageAdminInLine(TabularInline):
+    extra = 1
+    model = ProductPhoto
+    max_num = 100
+
+
 @admin.register(Company)
 class PersonAdmin3(TranslationAdmin):
+    inlines = (ProductImageAdminInLine,)
     list_display = ('name', 'web_site')
-
-
-@admin.register(ProductPhoto)
-class Admin(admin.ModelAdmin):
-    pass
 
 
 @admin.register(Contact)
