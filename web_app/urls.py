@@ -1,5 +1,5 @@
 from django.urls import path
-from web_app.views import CompanyView, ContactViewSet, AboutUsViewSet, MainViewSet
+from web_app.views import CompanyView, ContactViewSet, AboutUsViewSet
 
 urlpatterns = [
     path('company/', CompanyView.as_view({'get': 'list'}), name='company_list'),
