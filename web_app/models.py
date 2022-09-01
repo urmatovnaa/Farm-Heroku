@@ -49,15 +49,3 @@ class AboutUs(models.Model):
 
     def __str__(self):
         return f'{self.name}'
-
-
-class Main(models.Model):
-    name = models.CharField(max_length=50)
-    text = models.CharField(max_length=1000)
-
-    class Meta:
-        verbose_name_plural = 'Main'
-
-    def __str__(self):
-        return f'{self.name}'
-

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from web_app.models import ProductPhoto, Company, Main, AboutUs, Contact
+from web_app.models import ProductPhoto, Company, AboutUs, Contact
 
 
 class ProductPhotoSerializer(serializers.ModelSerializer):
@@ -36,8 +36,3 @@ class AboutUsSerializer(serializers.ModelSerializer):
         model = AboutUs
         fields = '__all__'
 
-
-class MainSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Main
-        fields = '__all__'

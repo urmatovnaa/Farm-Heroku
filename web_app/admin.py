@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin.options import TabularInline
 from modeltranslation.admin import TranslationAdmin
-from web_app.models import ProductPhoto, Company, Contact, Main, AboutUs
+from web_app.models import ProductPhoto, Company, Contact, AboutUs
 
 
 class ProductImageAdminInLine(TabularInline):
@@ -24,9 +24,3 @@ class PersonAdmin3(TranslationAdmin):
 @admin.register(AboutUs)
 class Admin2(TranslationAdmin):
     pass
-
-
-@admin.register(Main)
-class Admin4(TranslationAdmin):
-    pass
-

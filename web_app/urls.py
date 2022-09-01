@@ -7,5 +7,4 @@ urlpatterns = [
         {'get': 'retrieve'}), name='company-detail'),
     path('contacts/', ContactViewSet.as_view({'get': 'list'}), name='contacts'),
     path('about_us/', AboutUsViewSet.as_view({'get': 'list'}), name='about-us'),
-    path('', MainViewSet.as_view({'get': 'list'}), name='main')
 ]
